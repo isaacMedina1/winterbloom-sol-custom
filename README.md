@@ -1,2 +1,2 @@
 # winterbloom-sol-custom
-Pithon scripts that I have been using on my Sol Eurorack module
+Python scripts that I have been using on my Sol Eurorack module. Some Pd patches will be added too.
