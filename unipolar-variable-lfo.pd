@@ -1,0 +1,14 @@
+#N canvas 2080 -223 312 255 12;
+#X obj 38 66 vsl 15 128 0 127 0 0 empty empty SHAPE 0 -9 0 10 -262144
+-1 -1 6200 1;
+#X obj 118 66 vsl 15 128 0 127 0 0 empty empty FREQ 0 -9 0 10 -262144
+-1 -1 12100 1;
+#X obj 198 66 vsl 15 128 0 127 0 0 empty empty ATT 0 -9 0 10 -262144
+-1 -1 1900 1;
+#X obj 38 212 ctlout 18;
+#X obj 118 212 ctlout 19;
+#X obj 198 212 ctlout 20;
+#X text 16 17 Patch for the Sol Unipolar Variable LFO;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
