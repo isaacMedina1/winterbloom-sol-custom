@@ -1,0 +1,65 @@
+#N canvas 244 213 432 409 12;
+#X obj 20 60 cnv 5 273 204 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 40 98 vsl 14 128 0 127 0 0 shape-a empty s(a) -4 -9 0 10 -99865
+-260097 -1 0 1;
+#X obj 70 98 vsl 14 128 0 127 0 0 f(a) empty f(a) -4 -9 0 10 -99865
+-118784 -1 2400 1;
+#X obj 149 98 vsl 14 128 0 127 0 0 (a-b)* empty (a-b)* -8 -9 0 10 -99865
+-258113 -1 0 1;
+#X obj 198 98 vsl 14 128 0 127 0 0 shape-b empty s(b) -4 -9 0 10 -99865
+-260097 -1 0 1;
+#X obj 228 98 vsl 14 128 0 127 0 0 f(b) empty f(b) -4 -9 0 10 -99865
+-172032 -1 7400 1;
+#X obj 100 98 vsl 14 128 0 127 0 0 a* empty a* 4 -9 0 10 -99865 -261377
+-1 0 1;
+#X obj 258 98 vsl 14 128 0 127 0 0 b* empty b* 3 -9 0 10 -99865 -261377
+-1 0 1;
+#X obj 131 66 cnv 1 1 193 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 180 66 cnv 1 1 193 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#N canvas 0 23 433 202 cc 0;
+#X obj 17 19 r shape-a;
+#X obj 98 18 r f(a);
+#X obj 338 18 r f(b);
+#X obj 258 18 r shape-b;
+#X obj 178 78 r a*;
+#X obj 178 138 r b*;
+#X obj 178 18 r (a-b)*;
+#X obj 178 42 ctlout 20;
+#X obj 178 102 ctlout 23;
+#X obj 178 162 ctlout 24;
+#X obj 258 42 ctlout 21;
+#X obj 338 42 ctlout 22;
+#X obj 18 42 ctlout 18;
+#X obj 98 42 ctlout 19;
+#X connect 0 0 12 0;
+#X connect 1 0 13 0;
+#X connect 2 0 11 0;
+#X connect 3 0 10 0;
+#X connect 4 0 8 0;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X restore 20 285 pd cc;
+#X obj 116 334 random 127;
+#X obj 196 334 random 127;
+#X floatatom 196 358 5 0 0 0 - - -;
+#X floatatom 116 358 5 0 0 0 - - -;
+#X obj 141 290 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 312 75 s(a)-cc18;
+#X text 312 95 f(a)-cc19;
+#X text 312 115 a*-cc23;
+#X text 312 145 (a-b)*-cc20;
+#X text 312 215 b*-cc24;
+#X text 312 175 s(b)-cc21;
+#X text 312 195 f(b)-cc22;
+#X text 16 17 Test patch for the Sol Unipolar Variable LFO;
+#X text 158 288 <- set random frequencies;
+#X connect 11 0 14 0;
+#X connect 11 0 2 0;
+#X connect 12 0 13 0;
+#X connect 12 0 5 0;
+#X connect 15 0 11 0;
+#X connect 15 0 12 0;
